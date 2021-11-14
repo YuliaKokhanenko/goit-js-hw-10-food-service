@@ -7,4 +7,4 @@ import arr from '../db/array-menu.json';
 
 const res = templ(arr);
 
-list.insertAdjacentHTML('afterbegin', res);
+list.insertAdjacentHTML('beforeend', res);
