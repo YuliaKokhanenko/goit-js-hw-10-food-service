@@ -4,11 +4,13 @@ const { bodyTheme, checkboxBtn } = refs;
 checkboxBtn.addEventListener('change', e => {
   const checked = e.target.checked;
   if (checked) {
-    bodyTheme.classList.add('light-theme');
-    localStorage.setItem('theme', 'light');
+    bodyTheme.classList.add('dark-theme');
+    bodyTheme.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark');
   } else {
+    bodyTheme.classList.add('light-theme');
     bodyTheme.classList.remove('dark-theme');
-    localStorage.removeItem('theme');
+    localStorage.setItem('theme', 'light');
   }
 });
 
